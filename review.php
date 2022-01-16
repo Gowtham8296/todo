@@ -1,10 +1,8 @@
 <?php
 include('database.php');
 $username = $_SESSION['username'];
-
 $works = [];
 $username = mysqli_real_escape_string($conn, stripslashes($username));
-
 $conclude = "SELECT * FROM work where username = '$username'";
 $result = mysqli_query($conn, $conclude);
 $rows = mysqli_num_rows($result);
